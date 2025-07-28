@@ -26,26 +26,49 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <div class="navbar-logo">AfiliasiStore</div>
+      <div class="navbar-left">
+        <div class="navbar-logo">AfiliasiStore</div>
+      </div>
 
-      <!-- Search form -->
-      <form class="navbar-search">
+      <div class="navbar-right">
+        <!-- Search Toggle Icon (mobile) -->
+        <button class="search-toggle" id="searchToggle">
+          <i data-feather="search"></i>
+        </button>
+
+        <!-- Hamburger Menu Icon (mobile) -->
+        <button id="hamburger-menu">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- Search form (desktop and mobile toggle) -->
+      <form class="navbar-search" id="searchForm">
         <input type="text" placeholder="Cari produk..." />
         <button type="submit"><i data-feather="search"></i></button>
+        <button
+          type="button"
+          id="searchClose"
+          aria-label="Close search"
+          style="display: none"
+        >
+          &times;
+        </button>
       </form>
 
       <ul class="navbar-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="halaman2.html#elektronik">Elektronik</a></li>
-        <li><a href="#fashion">Fashion</a></li>
-        <li><a href="#rumah">Peralatan Rumah</a></li>
-        <li><a href="#kecantikan">Kecantikan</a></li>
+        <li><a href="halaman2.html">Elektronik</a></li>
+        <li><a href="halaman3.html">Fashion</a></li>
+        <li><a href="halaman4.html">Peralatan Rumah</a></li>
+        <li><a href="halaman5.html">Kecantikan</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
-
-      <!-- Hamburger menu for mobile -->
-      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
     </nav>
+
+    <!-- Hamburger menu for mobile -->
+    <!-- <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </nav> -->
 
     <!-- Hero section -->
     <section class="hero">
@@ -174,20 +197,24 @@
       <h2><span>Kontak</span> Kami</h2>
       <p>Ingin bekerjasama sebagai affiliate? Hubungi kami!</p>
       <div class="row">
-        <form>
+        <form id="contactForm">
           <div class="input-group">
-            <i data-feather="user"></i
-            ><input type="text" placeholder="Nama" required />
+            <i data-feather="user"></i>
+            <input type="text" name="name" placeholder="Nama" required />
           </div>
           <div class="input-group">
-            <i data-feather="mail"></i
-            ><input type="email" placeholder="Email" required />
+            <i data-feather="mail"></i>
+            <input type="email" name="email" placeholder="Email" required />
           </div>
           <div class="input-group">
             <i data-feather="message-circle"></i>
-            <textarea placeholder="Tulis pesan..." required></textarea>
+            <textarea
+              name="message"
+              placeholder="Tulis pesan..."
+              required
+            ></textarea>
           </div>
-          <button type="submit" class="btn">Kirim</button>
+          <button type="submit" class="btn">Kirim via WhatsApp</button>
         </form>
       </div>
     </section>
