@@ -421,11 +421,11 @@ textarea {
 }
 
 .modern-footer {
-  background-color: #111;
+  background-color: #ffffff;
   color: #ccc;
   padding: 3rem 1rem;
   font-family: "Inter", sans-serif;
-  border-top: 1px solid #222;
+  border-top: 1px solid #faf8f8;
 }
 
 .footer-container {
@@ -491,7 +491,7 @@ textarea {
 }
 
 .credit span {
-  color: #fff;
+  color: #0452fc;
   font-weight: bold;
 }
 
