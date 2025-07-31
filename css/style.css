@@ -55,16 +55,31 @@ img {
 }
 
 /* Search form desktop */
+/* Default (desktop) */
 .navbar-search {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 20px;
   background-color: #fff;
-  padding: 0 0.5rem;
-  height: 36px;
-  max-width: 300px;
-  width: 100%;
+}
+
+#searchClose {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #888;
+  cursor: pointer;
+  padding: 0 0.6rem;
+  border-radius: 0;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchClose:hover {
+  color: #555;
 }
 
 .navbar-search input[type="text"] {
@@ -134,27 +149,12 @@ img {
     padding: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    z-index: 999;
+    z-index: 99999;
   }
 
   .navbar-nav.active {
     display: flex;
   }
-}
-
-#searchClose {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  color: #888;
-  cursor: pointer;
-  padding: 0 0.6rem;
-  border-radius: 0 20px 20px 0;
-  transition: color 0.3s ease;
-}
-
-#searchClose:hover {
-  color: #555;
 }
 
 /* Navbar */
@@ -188,8 +188,8 @@ img {
 }
 
 .navbar-nav li a:hover {
-  color: #005cb2;
-  background-color: #333;
+  color: #fafbfc;
+  background-color: #005cb2;
 }
 
 #hamburger-menu {
@@ -413,29 +413,86 @@ textarea {
 }
 
 /* Footer */
-footer {
-  background-color: #ffffff;
-  padding: 2rem;
+
+:root {
+  --instagram: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+  --facebook: #1877f2;
+  --x-color: #000;
+}
+
+.modern-footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 3rem 1rem;
+  font-family: "Inter", sans-serif;
+  border-top: 1px solid #222;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
-  border-top: 1px solid #eee;
 }
 
-footer .socials a {
-  margin: 0 0.5rem;
-  color: #1e88e5;
-  font-size: 1.2rem;
+.socials {
+  margin-bottom: 1.5rem;
 }
 
-footer .links a {
-  margin: 0 0.8rem;
-  color: #333;
-  font-weight: 500;
+.socials .social {
+  display: inline-block;
+  margin: 0 0.7rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.4s ease;
+  background: #222;
 }
 
-footer .credit p {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #777;
+.socials .social i {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+/* Social specific hover effects */
+.social.instagram:hover {
+  background: var(--instagram);
+  transform: scale(1.2);
+}
+
+.social.facebook:hover {
+  background-color: var(--facebook);
+  transform: scale(1.2);
+}
+
+.social.twitter:hover {
+  background-color: var(--x-color);
+  transform: scale(1.2);
+}
+
+.footer-links {
+  margin: 1.5rem 0;
+}
+
+.footer-links a {
+  color: #aaa;
+  margin: 0 1rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.credit p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.credit span {
+  color: #fff;
+  font-weight: bold;
 }
 
 /* Responsive Menu */
