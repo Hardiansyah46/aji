@@ -52,7 +52,11 @@
         >
           &times;
         </button>
-        <input type="text" placeholder="Cari produk..." />
+        <input
+          type="text"
+          id="desktopSearchInput"
+          placeholder="Cari produk..."
+        />
         <button type="submit"><i data-feather="search"></i></button>
       </form>
 
@@ -66,158 +70,157 @@
       </ul>
     </nav>
 
-    <!-- Hamburger menu for mobile -->
-    <!-- <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-    </nav> -->
-
     <!-- Hero section -->
     <section class="hero">
       <h1>Rekomendasi Produk Terbaik</h1>
       <p>Dapatkan produk favorit Anda melalui link afiliasi terpercaya!</p>
     </section>
+    <div id="searchResults" class="search-results">
+      <!-- Elektronik -->
+      <section id="elektronik" class="menu">
+        <div id="searchResults" class="search-results">
+        <h2><span>Elektronik</span> Pilihan</h2>
+        <div class="row">
+          <article class="menu-card">
+            <img src="img/1.jpeg" alt="Mikrotik" />
+            <h3>Mikrotik RB750Gr3 (hEX)</h3>
+            <p>
+              Router kecil yang kuat dan hemat daya, cocok untuk jaringan kantor
+              kecil dan rumahan.
+            </p>
+            <a href="halaman2.html" class="read-more" target="_self"
+              >Lihat Produk</a
+            >
+          </article>
+          <article class="menu-card">
+            <img src="img/headphone.jpg" alt="Headphone" />
+            <h3>Headphone Wireless Sony</h3>
+            <p>Audio jernih, desain elegan, baterai tahan lama.</p>
+            <a
+              href="https://afiliasi-link.com/sony-headphone"
+              class="read-more"
+              target="_blank"
+              >Lihat Produk</a
+            >
+          </article>
+        </div>
+        </div>
+      </section>
 
-    <!-- Elektronik -->
-    <section id="elektronik" class="menu">
-      <h2><span>Elektronik</span> Pilihan</h2>
-      <div class="row">
-        <article class="menu-card">
-          <img src="img/1.jpeg" alt="Mikrotik" />
-          <h3>Mikrotik RB750Gr3 (hEX)</h3>
-          <p>
-            Router kecil yang kuat dan hemat daya, cocok untuk jaringan kantor
-            kecil dan rumahan.
-          </p>
-          <a href="halaman2.html" class="read-more" target="_self"
-            >Lihat Produk</a
-          >
-        </article>
-        <article class="menu-card">
-          <img src="img/headphone.jpg" alt="Headphone" />
-          <h3>Headphone Wireless Sony</h3>
-          <p>Audio jernih, desain elegan, baterai tahan lama.</p>
-          <a
-            href="https://afiliasi-link.com/sony-headphone"
-            class="read-more"
-            target="_blank"
-            >Lihat Produk</a
-          >
-        </article>
-      </div>
-    </section>
+      <!-- Fashion -->
+      <section id="fashion" class="menu">
+        <h2><span>Fashion</span> & Aksesoris</h2>
+        <div class="row">
+          <article class="menu-card">
+            <img src="img/jaket.jpg" alt="Jaket" />
+            <h3>Jaket Hoodie Pria</h3>
+            <p>Nyaman dipakai harian, cocok untuk cuaca dingin.</p>
+            <a
+              href="https://afiliasi-link.com/jaket"
+              class="read-more"
+              target="_blank"
+              >Lihat Produk</a
+            >
+          </article>
+          <article class="menu-card">
+            <img src="img/tas.jpg" alt="Tas" />
+            <h3>Tas Selempang Kulit</h3>
+            <p>Tampil stylish dengan tas serbaguna premium.</p>
+            <a
+              href="https://afiliasi-link.com/tas"
+              class="read-more"
+              target="_blank"
+              >Lihat Produk</a
+            >
+          </article>
+        </div>
+      </section>
 
-    <!-- Fashion -->
-    <section id="fashion" class="menu">
-      <h2><span>Fashion</span> & Aksesoris</h2>
-      <div class="row">
-        <article class="menu-card">
-          <img src="img/jaket.jpg" alt="Jaket" />
-          <h3>Jaket Hoodie Pria</h3>
-          <p>Nyaman dipakai harian, cocok untuk cuaca dingin.</p>
-          <a
-            href="https://afiliasi-link.com/jaket"
-            class="read-more"
-            target="_blank"
-            >Lihat Produk</a
-          >
-        </article>
-        <article class="menu-card">
-          <img src="img/tas.jpg" alt="Tas" />
-          <h3>Tas Selempang Kulit</h3>
-          <p>Tampil stylish dengan tas serbaguna premium.</p>
-          <a
-            href="https://afiliasi-link.com/tas"
-            class="read-more"
-            target="_blank"
-            >Lihat Produk</a
-          >
-        </article>
-      </div>
-    </section>
+      <!-- Rumah -->
+      <section id="rumah" class="menu">
+        <h2><span>Peralatan</span> Rumah Tangga</h2>
+        <div class="row">
+          <article class="menu-card">
+            <img src="img/vacuum.jpg" alt="Vacuum Cleaner" />
+            <h3>Vacuum Cleaner Portable</h3>
+            <p>Bersihkan debu rumah dengan mudah & cepat.</p>
+            <a
+              href="https://afiliasi-link.com/vacuum"
+              class="read-more"
+              target="_blank"
+              >Lihat Produk</a
+            >
+          </article>
+          <article class="menu-card">
+            <img src="img/blender.jpg" alt="Blender" />
+            <h3>Blender Serbaguna</h3>
+            <p>Blender hemat daya, cocok untuk jus & smoothies.</p>
+            <a
+              href="https://afiliasi-link.com/blender"
+              class="read-more"
+              target="_blank"
+              >Lihat Produk</a
+            >
+          </article>
+        </div>
+      </section>
 
-    <!-- Rumah -->
-    <section id="rumah" class="menu">
-      <h2><span>Peralatan</span> Rumah Tangga</h2>
-      <div class="row">
-        <article class="menu-card">
-          <img src="img/vacuum.jpg" alt="Vacuum Cleaner" />
-          <h3>Vacuum Cleaner Portable</h3>
-          <p>Bersihkan debu rumah dengan mudah & cepat.</p>
-          <a
-            href="https://afiliasi-link.com/vacuum"
-            class="read-more"
-            target="_blank"
-            >Lihat Produk</a
-          >
-        </article>
-        <article class="menu-card">
-          <img src="img/blender.jpg" alt="Blender" />
-          <h3>Blender Serbaguna</h3>
-          <p>Blender hemat daya, cocok untuk jus & smoothies.</p>
-          <a
-            href="https://afiliasi-link.com/blender"
-            class="read-more"
-            target="_blank"
-            >Lihat Produk</a
-          >
-        </article>
-      </div>
-    </section>
+      <!-- Kecantikan -->
+      <section id="kecantikan" class="menu">
+        <h2><span>Kecantikan</span> & Perawatan</h2>
+        <div class="row">
+          <article class="menu-card">
+            <img src="img/skincare.jpg" alt="Skincare" />
+            <h3>Skincare Harian GlowUp</h3>
+            <p>Perawatan wajah untuk kulit cerah alami.</p>
+            <a
+              href="https://afiliasi-link.com/skincare"
+              class="read-more"
+              target="_blank"
+              >Lihat Produk</a
+            >
+          </article>
+          <article class="menu-card">
+            <img src="img/makeup.jpg" alt="Makeup Kit" />
+            <h3>Makeup Kit Profesional</h3>
+            <p>Lengkap untuk pemula maupun profesional.</p>
+            <a
+              href="https://afiliasi-link.com/makeup"
+              class="read-more"
+              target="_blank"
+              >Lihat Produk</a
+            >
+          </article>
+        </div>
+      </section>
 
-    <!-- Kecantikan -->
-    <section id="kecantikan" class="menu">
-      <h2><span>Kecantikan</span> & Perawatan</h2>
-      <div class="row">
-        <article class="menu-card">
-          <img src="img/skincare.jpg" alt="Skincare" />
-          <h3>Skincare Harian GlowUp</h3>
-          <p>Perawatan wajah untuk kulit cerah alami.</p>
-          <a
-            href="https://afiliasi-link.com/skincare"
-            class="read-more"
-            target="_blank"
-            >Lihat Produk</a
-          >
-        </article>
-        <article class="menu-card">
-          <img src="img/makeup.jpg" alt="Makeup Kit" />
-          <h3>Makeup Kit Profesional</h3>
-          <p>Lengkap untuk pemula maupun profesional.</p>
-          <a
-            href="https://afiliasi-link.com/makeup"
-            class="read-more"
-            target="_blank"
-            >Lihat Produk</a
-          >
-        </article>
-      </div>
-    </section>
-
-    <!-- Kontak -->
-    <section id="kontak" class="contact">
-      <h2><span>Kontak</span> Kami</h2>
-      <p>Ingin bekerjasama sebagai affiliate? Hubungi kami!</p>
-      <div class="row">
-        <form id="contactForm">
-          <div class="input-group">
-            <i data-feather="user"></i>
-            <input type="text" name="name" placeholder="Nama" required />
-          </div>
-          <div class="input-group">
-            <i data-feather="mail"></i>
-            <input type="email" name="email" placeholder="Email" required />
-          </div>
-          <div class="input-group">
-            <i data-feather="message-circle"></i>
-            <textarea
-              name="message"
-              placeholder="Tulis pesan..."
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn">Kirim via WhatsApp</button>
-        </form>
-      </div>
-    </section>
+      <!-- Kontak -->
+      <section id="kontak" class="contact">
+        <h2><span>Kontak</span> Kami</h2>
+        <p>Ingin bekerjasama sebagai affiliate? Hubungi kami!</p>
+        <div class="row">
+          <form id="contactForm">
+            <div class="input-group">
+              <i data-feather="user"></i>
+              <input type="text" name="name" placeholder="Nama" required />
+            </div>
+            <div class="input-group">
+              <i data-feather="mail"></i>
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="input-group">
+              <i data-feather="message-circle"></i>
+              <textarea
+                name="message"
+                placeholder="Tulis pesan..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Kirim via WhatsApp</button>
+          </form>
+        </div>
+      </section>
+    
 
     <!-- Footer -->
     <footer class="modern-footer">
