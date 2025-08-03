@@ -88,4 +88,20 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Kontak kami
+document.getElementById("sendEmailBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const name = document.querySelector("input[name='name']").value;
+  const email = document.querySelector("input[name='email']").value;
+  const message = document.querySelector("textarea[name='message']").value;
+
+  const subject = encodeURIComponent("Permintaan Kerjasama Affiliate");
+  const body = encodeURIComponent(
+    `Nama: ${name}\nEmail: ${email}\nPesan: ${message}`
+  );
+
+  window.location.href = `mailto:ajihardinasah123@gmail.com?subject=${subject}&body=${body}`;
+});
+
 feather.replace(); // Penting agar ikon muncul
