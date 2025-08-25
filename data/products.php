@@ -228,7 +228,7 @@ $products = [
   [
     "id" => 8,
     "category" => "peralatanrumah",
-    "img" => "img/vacuum.jpg",
+    "img" => "",
     "alt" => "Vacuum Cleaner Portable",
     "title" => "Vacuum Cleaner Portable",
     "desc" => "Ringkas dan mudah digunakan untuk membersihkan rumah dengan cepat.",
