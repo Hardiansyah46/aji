@@ -1,9 +1,9 @@
 <?php
 $products = [
-  // ================= Kecantikan =================
+  // ================= Elektronik =================
   [
     "id" => 1,
-    "category" => "kecantikan",
+    "category" => "elektronik",
     "img" => "",
     "alt" => "Skincare Harian GlowUp",
     "title" => "Skincare Harian GlowUp",
@@ -14,7 +14,7 @@ $products = [
   ],
   [
     "id" => 2,
-    "category" => "kecantikan",
+    "category" => "elektronik",
     "img" => "",
     "alt" => "Makeup Kit Profesional",
     "title" => "Makeup Kit Profesional",

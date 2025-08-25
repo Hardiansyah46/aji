@@ -2,7 +2,7 @@
 include "data/products.php";
 
 // Tentukan kategori
-$kategori = "kecantikan";
+$kategori = "elektronik";
 
 // Filter produk sesuai kategori
 $kategori_products = array_filter($products, fn($p) => $p['category'] === $kategori);

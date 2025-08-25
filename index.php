@@ -50,7 +50,7 @@ $hal  = $_GET['hal'] ?? 1;
     <li><a href="index.php?page=otomotif">Otomotif</a></li>
     <li><a href="index.php?page=fashion">Fashion</a></li>
     <li><a href="index.php?page=peralatanrumah">Peralatan Rumah</a></li>
-    <li><a href="index.php?page=kecantikan">Kecantikan</a></li>
+    <li><a href="index.php?page=elektronik">Elektronik</a></li>
     <li><a href="#kontak">Kontak</a></li>
   </ul>
 </nav>
