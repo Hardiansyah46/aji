@@ -87,7 +87,7 @@ $products = [
             merekomendasikan produk berikut:
           </p>",        
     "price" => "",
-    "link" => "#https://s.shopee.co.id/3LGLkL2sUb"
+    "link" => "https://s.shopee.co.id/3LGLkL2sUb"
   ],
   [
     "id" => 4,
@@ -156,7 +156,7 @@ $products = [
             merekomendasikan produk berikut:
           </p>",    
     "price" => "",
-    "link" => "#https://s.shopee.co.id/3LGLkL2sUb"
+    "link" => "https://s.shopee.co.id/3LGLkL2sUb"
   ],
 
   // ================= Otomotif =================
@@ -201,7 +201,7 @@ $products = [
             tampilan maupun penggantian reflektor rusak.
           </p>",
     "price" => "Rp300.000",
-    "link" => "#https://id.shp.ee/kzqp7AE"
+    "link" => "https://id.shp.ee/kzqp7AE"
   ],
   [
     "id" => 6,
