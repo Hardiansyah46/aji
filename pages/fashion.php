@@ -20,10 +20,12 @@ $totalPages = ceil($totalProducts / $perPage);
 $start = ($pageNum - 1) * $perPage;
 $display_products = array_slice(array_reverse($kategori_products), $start, $perPage);
 ?>
+    
 
 <div class="layout">
     <main class="main">
         <h2>Produk <?= ucfirst($kategori) ?></h2>
+            <div id="searchResults"></div>
         <div class="row">
             <?php if (!empty($display_products)): ?>
                 <?php foreach ($display_products as $p): ?>

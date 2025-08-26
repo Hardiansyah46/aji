@@ -1,7 +1,7 @@
 <?php
 include "data/products.php";
 
-// Tentukan kategori
+// Tentukan kategori elektronik
 $kategori = "elektronik";
 
 // Filter produk sesuai kategori

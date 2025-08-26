@@ -24,7 +24,7 @@ $sidebar_items = array_filter(array_reverse($products), function($p) use ($id) {
 $sidebar_items = array_slice($sidebar_items, 0, 3);
 ?>
 
-<div class="layout" style="display:flex; gap:2rem; flex-wrap:wrap;">
+<div class="layout">
     <!-- Konten Produk -->
     <main class="main" style="flex:1; min-width:300px;">
         <div class="produk-detail">
@@ -58,67 +58,3 @@ $sidebar_items = array_slice($sidebar_items, 0, 3);
         </ul>
     </aside>
 </div>
-<style>
-/* ================= Halaman Produk ================= */
-/* Sidebar */
-.sidebar {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.sidebar h3 {
-    margin-bottom: 1rem;
-    color: #007bff;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin-bottom: 15px;
-}
-
-.sidebar li img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.sidebar li span {
-    font-size: 0.95rem;
-    color: #333;
-}
-
-/* Layout Flex */
-.layout {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .produk-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .produk-img img {
-        max-width: 100%;
-    }
-    .layout {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-    }
-}
-</style>
-
-<?php
-// kode PHP produk sama sidebar seperti sebelumnya
-?>

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("desktopSearchInput");
   const searchResults = document.getElementById("searchResults");
 
-  // Ambil semua menu-card
+  // Ambil semua menu-card (kalau mau dipakai untuk filter lokal)
   const articles = Array.from(document.querySelectorAll(".menu-card")).map(
     (card) => {
       return {
@@ -18,25 +18,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  // Submit search
+  // Submit search (fetch ke search.php biar global)
   searchForm?.addEventListener("submit", function (e) {
     e.preventDefault();
-    const keyword = input.value.trim().toLowerCase();
-    let matchCount = 0;
+    const keyword = input.value.trim();
 
-    articles.forEach((item) => (item.element.style.display = "none"));
+    if (!keyword) return;
 
-    articles.forEach((item) => {
-      if (item.title.includes(keyword) || item.excerpt.includes(keyword)) {
-        item.element.style.display = "";
-        matchCount++;
-      }
-    });
-
-    searchResults.innerHTML =
-      matchCount === 0
-        ? `<p>Tidak ada hasil ditemukan untuk "<strong>${keyword}</strong>"</p>`
-        : "";
+    fetch(`/AffiliasisStore/pages/search.php?q=${encodeURIComponent(keyword)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        let html = "";
+        if (data.length === 0) {
+          html = `<p>Tidak ada hasil ditemukan untuk "<strong>${keyword}</strong>"</p>`;
+        } else {
+          html = data
+            .map(
+              (item) => `
+                <div class="menu-card">
+                  <img src="${item.img}" alt="${item.title}" class="featured-img">
+                  <div class="card-content">
+                    <h3>${item.title}</h3>
+                    <p class="excerpt">${item.desc}</p>
+                    <a href="index.php?page=produk&id=${item.id}" class="read-more">Lihat Produk</a>
+                  </div>
+                </div>
+              `
+            )
+            .join("");
+        }
+        searchResults.innerHTML = html;
+      })
+      .catch((err) => {
+        console.error(err);
+        searchResults.innerHTML = "<p>Terjadi kesalahan.</p>";
+      });
   });
 
   // Toggle search (mobile)
@@ -48,13 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Tombol X
+  // Tombol X (reset input)
   searchClose?.addEventListener("click", () => {
     input.value = "";
     searchClose.style.display = "none";
     input.focus();
   });
 
+  // Munculkan tombol X kalau ada input
   input?.addEventListener("input", () => {
     searchClose.style.display = input.value.trim() !== "" ? "inline" : "none";
   });
@@ -67,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Klik luar tutup
+  // Klik luar → tutup menu & search
   document.addEventListener("click", function (e) {
     const target = e.target;
     if (
@@ -82,10 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Kontak kami
+  // Tombol "Kontak kami"
   document
     .getElementById("sendEmailBtn")
-    .addEventListener("click", function (e) {
+    ?.addEventListener("click", function (e) {
       e.preventDefault();
       const name = document.querySelector("input[name='name']").value;
       const email = document.querySelector("input[name='email']").value;
