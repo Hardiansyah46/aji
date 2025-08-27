@@ -20,6 +20,7 @@ $hal  = $_GET['hal'] ?? 1;
 <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 <script src="https://unpkg.com/feather-icons"></script>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
