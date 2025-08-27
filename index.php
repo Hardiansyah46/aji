@@ -125,30 +125,5 @@ $hal  = $_GET['hal'] ?? 1;
 <script>feather.replace();</script>
 </body>
 </html>
-<script>
-const input = document.querySelector("#search-input");
-const resultBox = document.querySelector("#search-results");
 
-input.addEventListener("keyup", async () => {
-  const q = input.value.trim();
-
-  if (q.length === 0) {
-    resultBox.innerHTML = "";
-    return;
-  }
-
-  const res = await fetch(`pages/search.php?q=${encodeURIComponent(q)}`);
-  const data = await res.json();
-
-  resultBox.innerHTML = data.map(p => `
-    <div class="result-item">
-      <img src="${p.img || 'img/no-image.png'}" alt="${p.alt}" />
-      <div>
-        <strong>${p.title}</strong><br>
-        <small>${p.price || "Hubungi penjual"}</small>
-      </div>
-    </div>
-  `).join("");
-});
-</script>
 
