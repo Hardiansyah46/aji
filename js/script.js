@@ -87,15 +87,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Klik luar → tutup menu & search
   document.addEventListener("click", function (e) {
     const target = e.target;
+
     if (
-      !hamburgerMenu.contains(target) &&
-      !navbarNav.contains(target) &&
-      !searchToggle.contains(target) &&
-      !searchForm.contains(target)
+      (!hamburgerMenu || !hamburgerMenu.contains(target)) &&
+      (!navbarNav || !navbarNav.contains(target)) &&
+      (!searchToggle || !searchToggle.contains(target)) &&
+      (!searchForm || !searchForm.contains(target))
     ) {
-      navbarNav.classList.remove("active");
-      searchForm.classList.remove("active");
-      searchClose.style.display = "none";
+      navbarNav?.classList.remove("active");
+      searchForm?.classList.remove("active");
+      if (searchClose) searchClose.style.display = "none";
     }
   });
 
