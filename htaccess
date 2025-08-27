@@ -1,0 +1,18 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Jika project di subfolder, tulis RewriteBase
+RewriteBase /AfiliasiStore/
+
+# Hilangkan index.php dari URL
+RewriteCond %{THE_REQUEST} /index\.php\? [NC]
+RewriteRule ^index\.php$ /AfiliasiStore/ [R=301,L]
+
+# Routing kategori: /elektronik, /fashion, /otomotif, dll
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?page=category&cat=$1 [L,QSA]
+
+# Routing produk: /kategori/slug-produk
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ index.php?page=produk&kategori=$1&slug=$2 [L,QSA]
+
+# Routing artikel: /tahun/bulan/hari/slug-artikel
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-zA-Z0-9_-]+)/?$ index.php?page=artikel&tahun=$1&bulan=$2&hari=$3&slug=$4 [L,QSA]

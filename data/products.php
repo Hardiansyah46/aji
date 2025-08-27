@@ -215,16 +215,17 @@ $products = [
   ],
 
   // ================= Peralatan Rumah =================
-  [
+[
     "id" => 7,
     "category" => "peralatanrumah",
-    "img" => "",
-    "alt" => "Blender Serbaguna",
-    "title" => "Blender Serbaguna",
-    "desc" => "Blender multifungsi untuk membuat jus, smoothie, dan bumbu masakan.",
-    "price" => "Rp350.000",
-    "link" => "#"
-  ],
+    "img" => "setrika.jpeg",
+    "alt" => "Setrika Phillips Anti-Terbakar",
+    "title" => "Setrika Phillips Anti-Terbakar 1kg",
+    "desc" => "Setrika Phillips Anti-Terbakar 1kg ini adalah pilihan ideal untuk membuat aktivitas menyetrika lebih cepat, aman, dan efisien. Dilengkapi dengan tapak anti-lengket yang mencegah pakaian menempel, pengatur suhu otomatis untuk berbagai jenis kain, dan fitur otomatis mati yang meningkatkan keamanan. Setrika ini hemat energi dengan konsumsi daya 400W dan tegangan 220V, cocok untuk penggunaan rumah tangga sehari-hari. Desain ringan dan ergonomis memudahkan manuver, membuat setiap sesi menyetrika menjadi lebih nyaman. Dengan garansi 12 bulan dari supplier, Setrika Phillips ini memberikan kualitas dan keandalan untuk rumah Anda. Produk ini cocok bagi siapa saja yang mencari alat rumah tangga praktis, aman, dan tahan lama.",
+    "price" => "Rp112.000",
+    "link" => "https://s.shopee.co.id/1BCTtEFgq6"
+],
+
   [
     "id" => 8,
     "category" => "peralatanrumah",
