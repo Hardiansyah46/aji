@@ -17,7 +17,7 @@ $hal  = $_GET['hal'] ?? 1;
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -121,7 +121,7 @@ $hal  = $_GET['hal'] ?? 1;
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=<?php echo time(); ?>" defer></script>
 <script>feather.replace();</script>
 </body>
 </html>
