@@ -1,0 +1,25 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /AffiliasisStore/
+
+# Hilangkan index.php dari URL
+RewriteCond %{THE_REQUEST} /index\.php\? [NC]
+RewriteRule ^index\.php$ /AffiliasisStore/ [R=301,L]
+
+# Homepage dengan pagination
+RewriteRule ^page/([0-9]+)/?$ index.php?page=home&hal=$1 [L,QSA]
+RewriteRule ^$ index.php?page=home [L,QSA]
+
+# Kategori dengan pagination: /kategori atau /kategori/page/2
+RewriteRule ^([a-zA-Z0-9_-]+)/page/([0-9]+)/?$ index.php?page=category&cat=$1&hal=$2 [L,QSA]
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?page=category&cat=$1 [L,QSA]
+
+# Produk: /kategori/slug-produk
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ index.php?page=produk&kategori=$1&slug=$2 [L,QSA]
+
+# Artikel: /tahun/bulan/hari/slug-artikel
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/([a-zA-Z0-9_-]+)/?$ index.php?page=artikel&tahun=$1&bulan=$2&hari=$3&slug=$4 [L,QSA]
+
+# Search
+RewriteRule ^search/?$ pages/search.php [L]
+

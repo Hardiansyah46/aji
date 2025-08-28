@@ -1,40 +1,15 @@
 <?php
 $products = [
-  // ================= Elektronik =================
-  [
-    "id" => 1,
-    "category" => "elektronik",
-    "img" => "",
-    "alt" => "Skincare Harian GlowUp",
-    "title" => "Skincare Harian GlowUp",
-    "desc" => "Rangkaian skincare lengkap untuk mencerahkan kulit wajah alami dalam 7 hari.",
-    "full_desc" => "Skincare Harian GlowUp merupakan rangkaian produk perawatan kulit yang dirancang untuk mencerahkan, melembapkan, dan menutrisi kulit wajah secara menyeluruh. Dengan bahan alami pilihan dan formula modern, kulit terasa lebih segar, kenyal, dan bercahaya dalam waktu singkat. Cocok untuk semua jenis kulit. Gunakan rutin pagi dan malam hari untuk hasil maksimal.",
-    "price" => "Rp250.000",
-    "link" => "#"
-  ],
-  [
-    "id" => 2,
-    "category" => "elektronik",
-    "img" => "",
-    "alt" => "Makeup Kit Profesional",
-    "title" => "Makeup Kit Profesional",
-    "desc" => "Paket make-up all-in-one untuk pemula maupun profesional.",
-    "price" => "Rp500.000",
-    "link" => "#"
-  ],
-
-  // ================= Fashion =================
-  [
-    "id" => 3,
-    "category" => "fashion",
-    "img" => "img/jaket.jpeg",
-    "alt" => "Jaket Pria Military Style",
-    "title" => "Jaket Pria Military Style",
-    "desc" => "Sepatu sneakers telah menjadi salah satu item fashion yang wajib
-            dimiliki oleh setiap pria. Bukan hanya karena kenyamanannya, tetapi
-            juga karena kemampuannya untuk beradaptasi dengan berbagai gaya,
-            dari kasual hingga semi-formal.",
-    "full_desc" => "<p>
+    // kategori Fashion
+    [
+        'id' => 1,
+        'slug' => 'jaket-pria-military-style',
+        'nama' => 'Jaket Pria Military Style',
+        'desc' => 'Jaket pria model <em>military style</em> ini menghadirkan kesan
+            maskulin dan keren untuk berbagai kesempatan. Dengan warna khaki
+            yang netral, jaket ini mudah dipadukan dengan berbagai outfit, baik
+            untuk aktivitas santai maupun traveling.',
+        'full_desc' => '<p>
             Jaket pria model <em>military style</em> ini menghadirkan kesan
             maskulin dan keren untuk berbagai kesempatan. Dengan warna khaki
             yang netral, jaket ini mudah dipadukan dengan berbagai outfit, baik
@@ -85,19 +60,19 @@ $products = [
           <p>
             Sedang cari jaket keren dengan harga terjangkau? Kami
             merekomendasikan produk berikut:
-          </p>",        
-    "price" => "",
-    "link" => "https://s.shopee.co.id/3LGLkL2sUb"
-  ],
-  [
-    "id" => 4,
-    "category" => "fashion",
-    "img" => "img/sneakers.jpeg",
-    "alt" => "Sepatu Sneakers Pria",
-    "title" => "Sepatu Sneakers Pria: Gaya Nyaman Sepanjang Hari",
-    "desc" => "Sneakers wajib dimiliki setiap pria karena nyaman dan cocok untuk berbagai gaya,
-        dari kasual hingga semi-formal. Pilihan tepat untuk aktivitas harian Anda.",
-    "full_desc" => "<p>
+          </p>',
+        'price' => 1100000,
+        'img' => 'img/jaket.jpeg',
+        'kategori' => 'fashion',
+        'link_affiliate' => 'https://s.shopee.co.id/3LGLkL2sUb'
+    ],
+    [
+        'id' => 2,
+        'slug' => 'Sepatu-Sneakers-Pria',
+        'nama' => 'Sepatu Sneakers Pria: Gaya Nyaman Sepanjang Hari',
+        'desc' => 'Sneakers wajib dimiliki setiap pria karena nyaman dan cocok untuk berbagai gaya,
+        dari kasual hingga semi-formal. Pilihan tepat untuk aktivitas harian Anda.',
+        'full_desc' => '<p>
             Sepatu sneakers telah menjadi salah satu item fashion yang wajib
             dimiliki oleh setiap pria. Bukan hanya karena kenyamanannya, tetapi
             juga karena kemampuannya untuk beradaptasi dengan berbagai gaya,
@@ -154,20 +129,19 @@ $products = [
           <p>
             Sedang cari sneakers berkualitas dengan harga terjangkau? Kami
             merekomendasikan produk berikut:
-          </p>",    
-    "price" => "",
-    "link" => "https://s.shopee.co.id/3LGLkL2sUb"
-  ],
-
-  // ================= Otomotif =================
-  [
-    "id" => 5,
-    "category" => "otomotif",
-    "img" => "img/n-max.jpeg",
-    "alt" => "Reflektor Lampu Depan NMAX New - WIN",
-    "title" => "Reflektor / Lampu Depan NMAX New - Merek WIN",
-    "desc" => "Reflektor berkualitas tinggi untuk Yamaha NMAX New. Tampilan elegan, bahan kokoh, dan cocok untuk pengganti lampu depan asli motor Anda.",
-    "full_desc" => "<p>
+          </p>',
+        'price' => 950000,
+        'img' => 'img/sneakers.jpeg',
+        'kategori' => 'fashion',
+        'link_affiliate' => 'https://s.shopee.co.id/3LGLkL2sUb'
+    ],
+    // Otomotif
+    [
+        'id' => 3,
+        'slug' => 'Reflektor-Lampu-Depan-NMAX-New-WIN',
+        'nama' => 'Reflektor / Lampu Depan NMAX New - Merek WIN',
+        'desc' => 'Reflektor berkualitas tinggi untuk Yamaha NMAX New. Tampilan elegan, bahan kokoh, dan cocok untuk pengganti lampu depan asli motor Anda.',
+        'full_desc' => '<p>
             Hadir untuk pengguna <strong>Yamaha NMAX New</strong>,
             reflektor/lampu depan ini terbuat dari bahan plastik dan mika
             berkualitas tinggi, menghadirkan pencahayaan maksimal dan tampilan
@@ -199,41 +173,23 @@ $products = [
             Ingin mengganti reflektor NMAX Anda dengan produk original dan
             berkualitas? Produk ini adalah pilihan tepat. Cocok untuk upgrade
             tampilan maupun penggantian reflektor rusak.
-          </p>",
-    "price" => "Rp300.000",
-    "link" => "https://id.shp.ee/kzqp7AE"
-  ],
-  [
-    "id" => 6,
-    "category" => "otomotif",
-    "img" => "",
-    "alt" => "Oli Motor Premium",
-    "title" => "Oli Motor Premium",
-    "desc" => "Menjaga mesin tetap awet & bertenaga lebih lama.",
-    "price" => "Rp150.000",
-    "link" => "#"
-  ],
-
-  // ================= Peralatan Rumah =================
-[
-    "id" => 7,
-    "category" => "peralatanrumah",
-    "img" => "setrika.jpeg",
-    "alt" => "Setrika Phillips Anti-Terbakar",
-    "title" => "Setrika Phillips Anti-Terbakar 1kg",
-    "desc" => "Setrika Phillips Anti-Terbakar 1kg ini adalah pilihan ideal untuk membuat aktivitas menyetrika lebih cepat, aman, dan efisien. Dilengkapi dengan tapak anti-lengket yang mencegah pakaian menempel, pengatur suhu otomatis untuk berbagai jenis kain, dan fitur otomatis mati yang meningkatkan keamanan. Setrika ini hemat energi dengan konsumsi daya 400W dan tegangan 220V, cocok untuk penggunaan rumah tangga sehari-hari. Desain ringan dan ergonomis memudahkan manuver, membuat setiap sesi menyetrika menjadi lebih nyaman. Dengan garansi 12 bulan dari supplier, Setrika Phillips ini memberikan kualitas dan keandalan untuk rumah Anda. Produk ini cocok bagi siapa saja yang mencari alat rumah tangga praktis, aman, dan tahan lama.",
-    "price" => "Rp112.000",
-    "link" => "https://s.shopee.co.id/1BCTtEFgq6"
-],
-
-  [
-    "id" => 8,
-    "category" => "peralatanrumah",
-    "img" => "",
-    "alt" => "Vacuum Cleaner Portable",
-    "title" => "Vacuum Cleaner Portable",
-    "desc" => "Ringkas dan mudah digunakan untuk membersihkan rumah dengan cepat.",
-    "price" => "Rp450.000",
-    "link" => "#"
-  ],
+          </p>',
+        'price' => 660000,
+        'img' => 'img/n-max.jpeg',
+        'kategori' => 'otomotif',
+        'link_affiliate' => 'https://id.shp.ee/kzqp7AE'
+    ],
+    // Kategori Peralatan Rumah 
+    [
+        'id' => 5,
+        'slug' => 'Setrika-Phillips-Anti-Terbakar',
+        'nama' => 'Setrika Phillips Anti-Terbakar 1kg',
+        'desc' => 'Setrika Phillips Anti-Terbakar 1kg ini adalah pilihan ideal untuk membuat aktivitas menyetrika lebih cepat, aman, dan efisien.',
+        'full_desc' => 'Setrika Phillips Anti-Terbakar 1kg ini adalah pilihan ideal untuk membuat aktivitas menyetrika lebih cepat, aman, dan efisien. Dilengkapi dengan tapak anti-lengket yang mencegah pakaian menempel, pengatur suhu otomatis untuk berbagai jenis kain, dan fitur otomatis mati yang meningkatkan keamanan. Setrika ini hemat energi dengan konsumsi daya 400W dan tegangan 220V, cocok untuk penggunaan rumah tangga sehari-hari. Desain ringan dan ergonomis memudahkan manuver, membuat setiap sesi menyetrika menjadi lebih nyaman. Dengan garansi 12 bulan dari supplier, Setrika Phillips ini memberikan kualitas dan keandalan untuk rumah Anda. Produk ini cocok bagi siapa saja yang mencari alat rumah tangga praktis, aman, dan tahan lama.',
+        'price' => 112000,
+        'img' => 'img/setrika.jpeg',
+        'kategori' => 'peralatanrumah',
+        'link_affiliate' => 'https://s.shopee.co.id/1BCTtEFgq6'
+    ],
 ];
+?>

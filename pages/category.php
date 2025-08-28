@@ -1,65 +1,66 @@
 <?php
-include "data/products.php";
+include __DIR__ . "/../data/products.php";
 
-$kategori = $_GET['cat'] ?? 'all';
-
-if ($kategori === 'all') {
-    $kategori_products = $products;
-} else {
-    $kategori_products = array_filter($products, fn($p) => $p['category'] === $kategori);
-}
-
-// Sidebar: 3 produk terbaru
-$sidebar_items = array_slice(array_reverse($kategori_products), 0, 3);
+// Ambil kategori dari URL
+$kategori = $_GET['cat'] ?? null;
 
 // Pagination
 $perPage = 6;
 $pageNum = isset($_GET['hal']) ? (int)$_GET['hal'] : 1;
-$totalProducts = count($kategori_products);
+
+// Filter produk sesuai kategori
+$category_products = array_filter($products, function($p) use ($kategori) {
+    return isset($p['kategori']) && $p['kategori'] === $kategori;
+});
+
+// Hitung pagination
+$totalProducts = count($category_products);
 $totalPages = ceil($totalProducts / $perPage);
 $start = ($pageNum - 1) * $perPage;
-$display_products = array_slice(array_reverse($kategori_products), $start, $perPage);
+$display_products = array_slice(array_reverse($category_products), $start, $perPage);
+
+// Sidebar 3 produk terbaru
+$sidebar_items = array_slice(array_reverse($products), 0, 3);
 ?>
 
 <div class="layout">
-    <main class="main">
-        <h2><?= $kategori === 'all' ? 'Semua Produk' : 'Produk ' . ucfirst($kategori) ?></h2>
-        <div class="row">
-            <?php if (!empty($display_products)): ?>
-                <?php foreach ($display_products as $p): ?>
-                    <div class="menu-card">
-                        <img src="<?= $p['img'] ?>" alt="<?= $p['title'] ?>" class="featured-img">
-                        <div class="card-content">
-                            <h3><?= $p['title'] ?></h3>
-                            <p class="excerpt"><?= $p['desc'] ?></p>
-                            <a href="index.php?page=produk&id=<?= $p['id'] ?>" class="read-more">Lihat Produk</a>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <p>Tidak ada produk tersedia.</p>
-            <?php endif; ?>
-        </div>
+  <main class="main">
+    <h2>Produk Kategori: <?= ucfirst($kategori) ?></h2>
 
-        <!-- Pagination -->
-        <?php if($totalPages > 1): ?>
-            <div class="pagination">
-                <?php for($i=1; $i<=$totalPages; $i++): ?>
-                    <a href="index.php?page=category&cat=<?= $kategori ?>&hal=<?= $i ?>" class="<?= $i==$pageNum ? 'active' : '' ?>">
-                        <?= $i ?>
-                    </a>
-                <?php endfor; ?>
+    <div class="row">
+      <?php if(!empty($display_products)): ?>
+        <?php foreach($display_products as $p): ?>
+          <div class="menu-card">
+            <img src="<?= $baseURL ?>/<?= $p['img'] ?? '' ?>" alt="<?= $p['nama'] ?? 'Produk' ?>" class="featured-img">
+            <div class="card-content">
+              <h3><?= $p['nama'] ?? 'Judul Produk' ?></h3>
+              <p class="excerpt">Harga: <?= isset($p['price']) ? 'Rp ' . number_format($p['price'],0,",",".") : '-' ?></p>
+              <!-- Link produk SEO-friendly -->
+              <a href="<?= $baseURL ?>/<?= $kategori ?>/<?= $p['slug'] ?>" class="read-more">Lihat Produk</a>
             </div>
-        <?php endif; ?>
-    </main>
+          </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>Tidak ada produk di kategori ini.</p>
+      <?php endif; ?>
+    </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <h3>Produk Terbaru</h3>
-        <ul>
-            <?php foreach ($sidebar_items as $item): ?>
-                <li><a href="index.php?page=produk&id=<?= $item['id'] ?>"><?= $item['title'] ?></a></li>
-            <?php endforeach; ?>
-        </ul>
-    </aside>
+    <!-- Pagination SEO-friendly -->
+    <?php if($totalPages > 1): ?>
+      <div class="pagination">
+        <?php for($i=1; $i<=$totalPages; $i++): ?>
+          <a href="<?= $baseURL ?>/<?= $kategori ?>/page/<?= $i ?>" class="<?= $i==$pageNum ? 'active' : '' ?>"><?= $i ?></a>
+        <?php endfor; ?>
+      </div>
+    <?php endif; ?>
+  </main>
+
+  <aside class="sidebar">
+    <h3>Produk Terbaru</h3>
+    <ul>
+      <?php foreach($sidebar_items as $item): ?>
+        <li><a href="<?= $baseURL ?>/<?= $item['kategori'] ?>/<?= $item['slug'] ?>"><?= $item['nama'] ?></a></li>
+      <?php endforeach; ?>
+    </ul>
+  </aside>
 </div>
