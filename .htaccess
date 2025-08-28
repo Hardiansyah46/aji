@@ -1,10 +1,10 @@
 Options +FollowSymLinks
 RewriteEngine On
-RewriteBase /AffiliasisStore/
+RewriteBase /Store/
 
 # Hilangkan index.php dari URL
 RewriteCond %{THE_REQUEST} /index\.php\? [NC]
-RewriteRule ^index\.php$ /AffiliasisStore/ [R=301,L]
+RewriteRule ^index\.php$ /Store/ [R=301,L]
 
 # Homepage dengan pagination
 RewriteRule ^page/([0-9]+)/?$ index.php?page=home&hal=$1 [L,QSA]

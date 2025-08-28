@@ -1,5 +1,5 @@
 <?php
-$baseURL = '/AffiliasisStore';
+$baseURL = '/Store';
 include __DIR__ . "/data/products.php";
 
 $page     = $_GET['page'] ?? 'home';
