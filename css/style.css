@@ -46,10 +46,15 @@ img {
   width: 250px;
   min-width: 200px;
   background: #fffcfc;
-  padding: 90px 10px;
+  padding: 20px 10px;
   box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  border-radius: 8px;
 }
 
 .sidebar h3 {
