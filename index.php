@@ -111,10 +111,11 @@ switch($page) {
   <div class="footer-container">
     <!-- Sosial Media -->
     <div class="socials">
-      <a href="#" class="social instagram" aria-label="Instagram"><i data-feather="instagram"></i></a>
-      <a href="#" class="social twitter" aria-label="X"><i data-feather="x"></i></a>
-      <a href="#" class="social facebook" aria-label="Facebook"><i data-feather="facebook"></i></a>
-    </div>
+  <a href="https://www.instagram.com/affstore_12" class="social instagram" aria-label="Instagram"><i data-feather="instagram"></i></a>
+  <a href="https://twitter.com/username" class="social twitter" aria-label="X"><i data-feather="x"></i></a>
+  <a href="https://www.facebook.com/profile.php?id=61575318681322&locale=id_ID" class="social facebook" aria-label="Facebook"><i data-feather="facebook"></i></a>
+</div>
+
 
     <!-- Links -->
     <div class="footer-links">

@@ -1,25 +1,27 @@
 <section id="about" class="about">
   <h2>Tentang Kami</h2>
   <p>
-    <strong>AfiliasiStore</strong> adalah platform affiliate marketing yang membantu 
-    kamu menemukan produk-produk terbaik sekaligus mendapatkan penghasilan tambahan 
-    dari program afiliasi. 
+    <strong>AfiliasiStore</strong> adalah platform affiliate marketing yang hadir 
+    untuk mendukung dan mempromosikan produk-produk lokal Indonesia agar bisa 
+    bersaing dan dikenal di pasar global.
   </p>
   <p>
-    Kami berfokus untuk menghubungkan mitra affiliate dengan berbagai brand dan 
-    produk terpercaya agar semua pihak mendapatkan keuntungan.
+    Kami percaya bahwa produk lokal memiliki kualitas dan potensi besar. 
+    Melalui sistem afiliasi, kami berupaya membantu UMKM dan brand lokal 
+    memperluas jangkauan pasar, meningkatkan penjualan, sekaligus mengurangi 
+    dominasi produk impor.
   </p>
 
-  <h3>Visi Kami</h3>
+  <h3>Misi Kami</h3>
   <p>
-    Menjadi jembatan antara konsumen, brand, dan affiliate marketer dengan sistem 
-    yang mudah, transparan, dan menguntungkan.
+    Membawa produk lokal Indonesia agar mendunia dengan strategi pemasaran digital 
+    yang mudah, transparan, dan menguntungkan bagi semua pihak.
   </p>
 
   <h3>Kontak Kami</h3>
   <p>
     📧 Email: 
-    <a href="mailto:ajihardinasah123@gmail.com">ajihardinasah123@gmail.com</a><br>
+    <a href="mailto:ajihardinasah123@gmail.com">hajiojer32@gmail.com</a><br>
     📱 WhatsApp: 
     <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
   </p>
