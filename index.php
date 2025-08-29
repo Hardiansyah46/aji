@@ -98,7 +98,7 @@ switch($page) {
         break;
 
         case 'about':
-    include __DIR__ . "/pages/aboutus.php";
+    include __DIR__ . "/pages/about.php";
     break;
 
 }
