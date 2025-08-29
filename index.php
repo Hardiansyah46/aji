@@ -1,6 +1,9 @@
 <?php
 $baseURL = '/Store';
 include __DIR__ . "/data/products.php";
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 
 $page     = $_GET['page'] ?? 'home';
 $slug     = $_GET['slug'] ?? null;
